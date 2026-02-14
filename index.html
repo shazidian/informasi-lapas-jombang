@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lapas Jombang Kelas IIB - Informasi Pengunjung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <img src="logolapas.png" alt="Logo Kemenkumham" class="logo">
+                    <div class="header-text">
+                        <h1>Lapas Jombang Kelas IIB</h1>
+                        <p>Informasi Pengunjung - Panduan lengkap untuk pengunjung</p>
+                    </div>
+                </div>
+                <button id="btnKembali" class="btn-kembali" style="display: none;">
+                    <span>← Kembali</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Homepage -->
+        <div id="homepage">
+            <!-- Image Carousel -->
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="cover1.jpg" alt="Lapas Jombang">
+                        <div class="carousel-overlay"></div>
+                        <div class="carousel-caption">
+                            <h2>Lapas Jombang Kelas IIB</h2>
+                            <p>Lembaga Pemasyarakatan yang Modern dan Humanis</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="cover1.jpg" alt="Fasilitas Kunjungan">
+                        <div class="carousel-overlay"></div>
+                        <div class="carousel-caption">
+                            <h2>Fasilitas Kunjungan</h2>
+                            <p>Ruang kunjungan yang nyaman dan aman</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="cover1.jpg" alt="Pelayanan Terbaik">
+                        <div class="carousel-overlay"></div>
+                        <div class="carousel-caption">
+                            <h2>Pelayanan Terbaik</h2>
+                            <p>Melayani dengan sepenuh hati untuk keluarga WBP</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+                <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+
+            <!-- Welcome Section -->
+            <div class="container welcome-section">
+                <div class="welcome-text">
+                    <h2>Selamat Datang</h2>
+                    <p>Website informasi pengunjung Lapas Jombang Kelas IIB. Temukan semua informasi penting yang Anda
+                        butuhkan sebelum berkunjung.</p>
+                </div>
+
+                <!-- Info Cards -->
+                <div class="cards-grid">
+                    <div class="info-card" onclick="showSection('makanan')">
+                        <div class="card-icon">⚠️</div>
+                        <div class="card-content">
+                            <h3>Makanan yang Tidak Diperbolehkan</h3>
+                            <p>Daftar makanan yang tidak boleh dibawa saat berkunjung</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card" onclick="showSection('pakaian')">
+                        <div class="card-icon">👔</div>
+                        <div class="card-content">
+                            <h3>Ketentuan Pakaian Pengunjung</h3>
+                            <p>Aturan berpakaian yang harus dipatuhi pengunjung</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card" onclick="showSection('cb-pb')">
+                        <div class="card-icon">📋</div>
+                        <div class="card-content">
+                            <h3>Pengurusan CB/PB WBP</h3>
+                            <p>Prosedur pengajuan Cuti Bersyarat dan Pembebasan Bersyarat</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card" onclick="showSection('integrasi')">
+                        <div class="card-icon">❤️</div>
+                        <div class="card-content">
+                            <h3>Hak Integrasi WBP</h3>
+                            <p>Informasi tentang hak-hak integrasi dan pembinaan WBP</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card" onclick="showSection('obat')">
+                        <div class="card-icon">💊</div>
+                        <div class="card-content">
+                            <h3>SOP Permintaan Obat WBP</h3>
+                            <p>Tata cara permintaan dan pemberian obat untuk WBP</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card" onclick="showSection('jadwal')">
+                        <div class="card-icon">🕐</div>
+                        <div class="card-content">
+                            <h3>Jadwal Kunjungan</h3>
+                            <p>Informasi hari dan jam kunjungan yang berlaku</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card" onclick="showSection('kontak')">
+                        <div class="card-icon">📞</div>
+                        <div class="card-content">
+                            <h3>Kontak Lapas</h3>
+                            <p>Alamat dan nomor telepon yang dapat dihubungi</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card" onclick="showSection('faq')">
+                        <div class="card-icon">❓</div>
+                        <div class="card-content">
+                            <h3>FAQ</h3>
+                            <p>Pertanyaan yang sering ditanyakan oleh pengunjung</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detail Pages -->
+        <div id="detailPage" class="detail-page" style="display: none;">
+            <div class="container">
+                <div class="detail-content">
+                    <!-- Content will be injected here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Lembaga Pemasyarakatan Kelas IIB Jombang</p>
+            <p class="footer-small">Untuk informasi lebih lanjut, hubungi petugas di bagian informasi</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
