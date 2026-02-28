@@ -1,3 +1,9 @@
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -73,7 +79,9 @@ body {
 .carousel {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 60vh;
+    min-height: 350px;
+    max-height: 600px;
     overflow: hidden;
     background: linear-gradient(to right, #1e3a8a, #1e40af);
 }
@@ -136,30 +144,35 @@ body {
 .carousel-btn {
     position: absolute;
     top: 50%;
+    left: auto;
+    right: auto;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
     color: white;
     border: none;
-    padding: 1rem;
     cursor: pointer;
     font-size: 1.5rem;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    transition: background-color 0.3s;
-}
-
-.carousel-btn:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    width: 55px;
+    height: 55px;
+    z-index: 10;
+    transition: all 0.3s ease;
 }
 
 .carousel-btn.prev {
-    left: 1rem;
+    left: 20px;
 }
 
 .carousel-btn.next {
-    right: 1rem;
+    right: 20px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .carousel-dots {
@@ -172,17 +185,17 @@ body {
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.6);
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 
 .dot.active {
-    width: 32px;
-    border-radius: 6px;
+    width: 28px;
+    border-radius: 20px;
     background-color: white;
 }
 
@@ -562,5 +575,55 @@ body {
 
     .btn-kembali::after {
         content: '←';
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .header-left {
+        flex-direction: column;
+    }
+
+    .logo {
+        height: 55px;
+        width: 55px;
+    }
+
+    .carousel {
+        height: 50vh;
+        min-height: 300px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 1.6rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .welcome-section {
+        padding: 1.5rem 0;
+    }
+
+    .detail-content {
+        padding: 1.25rem;
+    }
+
+    .poster-area {
+        min-height: 300px;
+        padding: 1rem;
     }
 }
