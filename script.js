@@ -64,13 +64,8 @@ function getSectionContent(sectionId) {
                 Untuk menjaga keamanan dan kesehatan WBP, terdapat beberapa jenis makanan yang tidak diperbolehkan dibawa saat berkunjung. Silakan perhatikan poster informasi berikut untuk mengetahui detail lengkap makanan yang dilarang.
             </p>
             <div class="poster-area">
-                <div class="poster.png">
-                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <p style="font-size: 1.125rem; font-weight: 600;">Area Poster/Gambar Informasi</p>
-                    <p style="font-size: 0.875rem; margin-top: 0.5rem;">Poster akan ditampilkan di sini</p>
-                </div>
+                <img src="poster.png" alt="Poster Makanan Dilarang">
+                
             </div>
             <div class="note-box">
                 <p><strong>💡 Info:</strong> Untuk informasi lebih detail, silakan lihat poster di atas atau hubungi petugas di bagian informasi.</p>
@@ -86,13 +81,7 @@ function getSectionContent(sectionId) {
                 Pengunjung wajib mengenakan pakaian yang sopan dan sesuai dengan ketentuan yang berlaku. Lihat poster informasi di bawah ini untuk mengetahui aturan berpakaian lengkap saat berkunjung ke Lapas.
             </p>
             <div class="poster-area">
-                <div class="poster.png">
-                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <p style="font-size: 1.125rem; font-weight: 600;">Area Poster/Gambar Informasi</p>
-                    <p style="font-size: 0.875rem; margin-top: 0.5rem;">Poster akan ditampilkan di sini</p>
-                </div>
+                <img src="poster.png" alt="Poster Pakaian Dilarang">
             </div>
             <div class="note-box">
                 <p><strong>💡 Info:</strong> Untuk informasi lebih detail, silakan lihat poster di atas atau hubungi petugas di bagian informasi.</p>
